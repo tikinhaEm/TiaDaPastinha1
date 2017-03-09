@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical">
+
+        <Button
+            android:text="Criar nova pasta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCriarPasta"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:id="@+id/layoutteste"
+        android:visibility="gone"
+        android:background="#F0F">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/lblTeste"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Recebido: R$__"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                />
+            <TextView
+                android:id="@+id/lblTeste2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Pagos:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginLeft="40dp"/>
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/lblTeste3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Total: R$__"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                />
+            <TextView
+                android:id="@+id/lblTeste4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Atletas: 10"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginLeft="40dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!--<TextView
+            android:id="@+id/lblTeste"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Testeeeeee"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:visibility="gone"
+            android:background="#F0F"/>
+-->
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblAtleta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome do Atleta"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ListView
+        android:id="@+id/listaItensAtleta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+    <TextView
+        android:id="@+id/lblTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: R$ 0,00"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/lblPago"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valor Pago: R$ 0,00"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/lblTroco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Troco: R$ 0,00"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <!--<CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAGO"/>-->
+
+</LinearLayout>
