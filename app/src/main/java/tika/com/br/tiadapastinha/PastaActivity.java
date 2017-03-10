@@ -17,6 +17,9 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -45,6 +48,8 @@ public class PastaActivity extends AppCompatActivity {
     private Button btnSelecionarAtleta;
     private Toolbar toolbar;
     final Context context = this;
+    private Animation animShow;
+    private ViewGroup view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,15 +63,10 @@ public class PastaActivity extends AppCompatActivity {
 
 
         // ***** LISTVIEW SEM CHECKBOX *****
-        //ListView listview= getListView();
-//        listview.setChoiceMode(listview.CHOICE_MODE_MULTIPLE);
         listview = (ListView) findViewById(android.R.id.list);
         listview.setTextFilterEnabled(true);
-//        setListAdapter(new ArrayAdapter<String>(this,
-//                android.R.layout.simple_list_item_1,atletas));
         listview.setAdapter(new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1,atletas));
-        //listview.getCheckedItemPositions().get(0);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -85,6 +85,13 @@ public class PastaActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        // ***** RODAPÉ *****
+        animShow = AnimationUtils.loadAnimation( this, R.anim.view_show);
+        view = (ViewGroup) findViewById(R.id.layoutteste);
+        view.setVisibility(View.VISIBLE);
+        view.startAnimation( animShow );
     }
 
     @Override

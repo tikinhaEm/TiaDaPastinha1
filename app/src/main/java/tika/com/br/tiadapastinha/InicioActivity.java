@@ -24,12 +24,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class InicioActivity extends AppCompatActivity {
+
     final Context context = this;
     private Button btnCriarPasta;
     private Toolbar toolbar;
-    private Animation animShow;
-    private TextView gridView;
-    private ViewGroup view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,17 +76,6 @@ public class InicioActivity extends AppCompatActivity {
                 alertDialog.show();
             }
         });
-
-
-        animShow = AnimationUtils.loadAnimation( this, R.anim.view_show);
-//        gridView = (TextView) findViewById(R.id.lblTeste);
-//        gridView.setVisibility(View.VISIBLE);
-//        gridView.startAnimation( animShow );
-
-        view = (ViewGroup) findViewById(R.id.layoutteste);
-        view.setVisibility(View.VISIBLE);
-        view.startAnimation( animShow );
-
     }
 
     @Override
